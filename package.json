@@ -1,7 +1,7 @@
 {
   "name": "grunt-ember-defeatureify-extended",
   "description": "Forked project fromgrunt-ember-defeatureify. Remove specially flagged feature blocks and debug statements from Ember source using defeatureify.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/flowjzh/grunt-ember-defeatureify",
   "author": {
     "name": "Flow Jiang",
