@@ -39,10 +39,30 @@ module.exports = function(grunt) {
       enableStripDebug: options.enableStripDebug
     };
 
-    content = grunt.file.read(sourceFile);
-
-    grunt.file.write(destFile, defeatureify(content, config));
-
+    // Iterate over all specified file groups.
+    this.files.forEach(function(f) {
+      // Concat specified files.
+      f.src.forEach(function(filepath) {
+        // Warn on and remove invalid source files (if nonull was set).
+        if (!grunt.file.exists(filepath)) {
+          grunt.log.warn('Source file "' + filepath + '" not found.');
+          return;
+        }
+        var contents = grunt.file.read(filepath),
+            replacement = defeatureify(contents, config),
+            changed = (contents !== replacement);
+        if (f.dest) {
+          grunt.file.write(f.dest, replacement);
+          if (changed) { 
+            grunt.log.writeln("Defeatureified code from " + filepath + 
+              " and saved to " + f.dest);
+          }
+        } else if (changed) {
+          grunt.file.write(filepath, replacement);
+          grunt.log.writeln("Defeatureified code from " + filepath);
+        }
+      });
+    });
   });
 
 };

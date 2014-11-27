@@ -1,23 +1,23 @@
 {
-  "name": "grunt-ember-defeatureify",
-  "description": "Experimental. Remove specially flagged feature blocks and debug statements from Ember source using defeatureify.",
+  "name": "grunt-ember-defeatureify-extended",
+  "description": "Forked project fromgrunt-ember-defeatureify. Remove specially flagged feature blocks and debug statements from Ember source using defeatureify.",
   "version": "0.1.0",
-  "homepage": "https://github.com/craigteegarden/grunt-ember-defeatureify",
+  "homepage": "https://github.com/flowjzh/grunt-ember-defeatureify",
   "author": {
-    "name": "Craig Teegarden",
-    "email": "craig.teegarden@gmail.com"
+    "name": "Flow Jiang",
+    "email": "flowjzh@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/craigteegarden/grunt-ember-defeatureify.git"
+    "url": "git://github.com/flowjzh/grunt-ember-defeatureify.git"
   },
   "bugs": {
-    "url": "https://github.com/craigteegarden/grunt-ember-defeatureify/issues"
+    "url": "https://github.com/flowjzh/grunt-ember-defeatureify/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/craigteegarden/grunt-ember-defeatureify/blob/master/LICENSE-MIT"
+      "url": "https://github.com/flowjzh/grunt-ember-defeatureify/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
